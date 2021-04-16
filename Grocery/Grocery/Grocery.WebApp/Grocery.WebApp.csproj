@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-Grocery.WebApp-321C72B9-0C0C-4794-B403-808704F04A76</UserSecretsId>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TagHelpers\**" />
+    <Content Remove="TagHelpers\**" />
+    <EmbeddedResource Remove="TagHelpers\**" />
+    <None Remove="TagHelpers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\custom.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.1" />
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\UploadedImages\" />
+  </ItemGroup>
+
+</Project>
